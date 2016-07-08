@@ -13,6 +13,7 @@ class WebChatHandler extends SimpleChannelInboundHandler<WebSocketFrame> {
 
     // 채널 파이프라인에서 현재핸들러가 등록된 이름을 구합니다.
     // 이 이름을 기준으로 앞뒤에 다른 핸들러를 추가할 수 있습니다.
+    /*
     private String handlerName(ChannelHandlerContext ctx) {
         final String[] result = new String[1];
         ctx.pipeline().toMap().forEach((name, handler) -> {
@@ -22,6 +23,7 @@ class WebChatHandler extends SimpleChannelInboundHandler<WebSocketFrame> {
         });
         return result[0];
     }
+    */
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, WebSocketFrame frame) throws Exception {

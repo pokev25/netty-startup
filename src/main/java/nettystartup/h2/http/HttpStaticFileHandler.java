@@ -50,8 +50,10 @@ public class HttpStaticFileHandler extends SimpleChannelInboundHandler<FullHttpR
             if (!HttpHeaders.isKeepAlive(req)) {
                 f.addListener(ChannelFutureListener.CLOSE);
             }
+            raf.close();
         } finally {
             req.release();
+            
         }
     }
 
